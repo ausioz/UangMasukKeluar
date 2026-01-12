@@ -106,6 +106,7 @@ class UangMasukMainFragment : Fragment() {
                 financeInAdapter.submitFlatList(filteredList)
                 binding.llNoData.isVisible = filteredList.isEmpty()
                 binding.recyclerView.isVisible = filteredList.isNotEmpty()
+                if (!MyApp.isTablet(requireContext())) binding.tvPeriode.isVisible = filteredList.isNotEmpty()
             }
         }
     }
