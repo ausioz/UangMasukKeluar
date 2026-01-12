@@ -1,5 +1,6 @@
 package com.nha.uangmasukkeluar
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -33,9 +34,12 @@ class MyApp : Application() {
             return (configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE
         }
 
-        fun setOrientationIfTablet(activity: Activity) {
+        @SuppressLint("SourceLockedOrientationActivity")
+        fun setOrientationByDevice(activity: Activity) {
             if (isTablet(activity)) {
                 activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            } else {
+                activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
             }
         }
     }

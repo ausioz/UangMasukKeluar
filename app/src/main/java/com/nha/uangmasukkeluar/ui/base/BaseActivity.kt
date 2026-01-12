@@ -8,6 +8,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MyApp.setOrientationIfTablet(this)
+        MyApp.setOrientationByDevice(this)
     }
 }
