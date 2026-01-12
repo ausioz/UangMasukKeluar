@@ -106,8 +106,6 @@ class UangMasukMainFragment : Fragment() {
                 financeInAdapter.submitFlatList(filteredList)
                 binding.llNoData.isVisible = filteredList.isEmpty()
                 binding.recyclerView.isVisible = filteredList.isNotEmpty()
-                binding.llTableTitle?.isVisible = filteredList.isNotEmpty()
-                binding.tvPeriode.isVisible = financeInList.isNotEmpty()
             }
         }
     }
@@ -239,7 +237,8 @@ class UangMasukMainFragment : Fragment() {
         financeInAdapter.submitFlatList(filteredList)
         binding.llNoData.isVisible = filteredList.isEmpty()
         binding.recyclerView.isVisible = filteredList.isNotEmpty()
-        binding.tvPeriode.isVisible = currentFinanceInList.isNotEmpty()
+        binding.llTableTitle?.isVisible = filteredList.isNotEmpty()
+        if (!MyApp.isTablet(requireContext())) binding.tvPeriode.isVisible = filteredList.isNotEmpty()
     }
 
     @SuppressLint("SetTextI18n")
@@ -449,7 +448,8 @@ class UangMasukMainFragment : Fragment() {
             val detailFragment = DetailUangFragment()
             detailFragment.arguments = bundle
 
-            (activity as? FinanceActivity)?.findViewById<LinearLayout>(R.id.ll_menu)?.visibility = View.GONE
+            (activity as? FinanceActivity)?.findViewById<LinearLayout>(R.id.ll_menu)?.visibility =
+                View.GONE
 
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.detail_container, detailFragment)
