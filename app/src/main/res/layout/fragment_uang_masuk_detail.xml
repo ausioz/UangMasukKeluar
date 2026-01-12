@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.finance.masuk.UangMasukMainFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDateTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:text="Tanggal Dibuat" />
+
+            <TextView
+                android:id="@+id/tvDateTimeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="22 April 2024 - 08:24:56" />
+
+            <TextView
+                android:id="@+id/tvMasukKeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp"
+                android:text="Masuk Ke" />
+
+            <TextView
+                android:id="@+id/tvMasukKeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="Kasir Perangkat ke-49" />
+
+            <TextView
+                android:id="@+id/tvTerimaDariTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp"
+                android:text="Terima Dari" />
+
+            <TextView
+                android:id="@+id/tvTerimaDariValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="Mira Workman" />
+
+            <TextView
+                android:id="@+id/tvKeteranganTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp"
+                android:text="Keterangan" />
+
+            <TextView
+                android:id="@+id/tvKeteranganValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="menjual kardus" />
+
+            <TextView
+                android:id="@+id/tvJumlahTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp"
+                android:text="Jumlah" />
+
+            <TextView
+                android:id="@+id/tvJumlahValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="Rp 150.000" />
+
+            <TextView
+                android:id="@+id/tvJenisTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp"
+                android:text="Jenis Pendapatan" />
+
+            <TextView
+                android:id="@+id/tvJenisValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                tools:text="Pendapatan Lain" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bukti transfer / nota / kwitansi"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_upload"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="14dp"
+                android:text="Ubah transaksi" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Hapus"
+                android:textColor="#FF3553"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

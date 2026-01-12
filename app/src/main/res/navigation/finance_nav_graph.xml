@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/uangMasukMainFragment">
+
+    <fragment
+        android:id="@+id/uangMasukMainFragment"
+        android:name="com.nha.uangmasukkeluar.ui.finance.masuk.UangMasukMainFragment"
+        android:label="Uang Masuk"
+        tools:layout="@layout/fragment_uang_masuk_main">
+        <action
+            android:id="@+id/to_uangMasukBuatTransaksiFragment"
+            app:destination="@id/uangMasukBuatTransaksiFragment" />
+        <action
+            android:id="@+id/to_detailUangFragment"
+            app:destination="@id/detailUangFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uangMasukBuatTransaksiFragment"
+        android:name="com.nha.uangmasukkeluar.ui.finance.masuk.buat_transaksi.UangMasukBuatTransaksiFragment"
+        android:label="UangMasukBuatTransaksiFragment"
+        tools:layout="@layout/fragment_uang_masuk_buat_transaksi">
+        <argument
+            android:name="financeIn"
+            android:defaultValue="@null"
+            app:argType="com.nha.uangmasukkeluar.domain.model.FinanceIn"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailUangFragment"
+        android:name="com.nha.uangmasukkeluar.ui.finance.detail.DetailUangFragment"
+        android:label="Detail Uang"
+        tools:layout="@layout/fragment_uang_masuk_detail">
+        <argument
+            android:name="financeIn"
+            android:defaultValue="@null"
+            app:argType="com.nha.uangmasukkeluar.domain.model.FinanceIn"
+            app:nullable="true" />
+        <action
+            android:id="@+id/to_uangMasukBuatTransaksiFragment"
+            app:destination="@id/uangMasukBuatTransaksiFragment" />
+    </fragment>
+
+
+</navigation>
